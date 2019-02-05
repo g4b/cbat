@@ -1,42 +1,44 @@
+import java.util.Arrays;
+
 public class Runner {
 
         public static void main(String[] args){
 
-            System.out.println(loneTeen(15,16));
-            System.out.println(loneTeen(19,20));
+            System.out.println(loneTeen(15,16)); // --> false
+            System.out.println(loneTeen(19,20)); // --> true
 
-            System.out.println(stringSplosion("WHaaaat??"));
-            System.out.println(stringSplosion("hello"));
+            System.out.println(stringSplosion("Whaat??")); // --> "WWhWhaWhaaWhaatWhaat?Whaat??"
+            System.out.println(stringSplosion("hello")); // --> "hhehelhellhello"
 
-            System.out.println(extraFront("Espanol")); // --> "EspEspEsp"
-            System.out.println(extraFront("Penultimate")); // --> "PenPenPen"
+            System.out.println(extraFront("Espanol")); // --> "EsEsEs"
+            System.out.println(extraFront("Penultimate")); // --> "PePePe"
 
             System.out.println(bobThere("xyzbobzyxb4bbbobb")); // --> true
             System.out.println(bobThere("BabBebBibB0bBub")); // --> false
 
-            System.out.println(countTriple("wheeeerreerrree!!!")); // --> 3
+            System.out.println(countTriple("wheeeerreerrree!!!")); // --> 4
             System.out.println(countTriple("abcdefyzziiiljk")); // --> 1
 
             System.out.println(lessBy10(10,20,29)); // --> true
             System.out.println(lessBy10(42, 35, 39)); // --> false
 
-            System.out.println(luckySum(8,13,2)); // --> 10
+            System.out.println(luckySum(8,13,2)); // --> 8
             System.out.println(luckySum(13,13,13)); // --> 0
 
             int[] a1 = {1,2,3};
             int[] b1 = {3,2,2};
             int[] a2 = {9,9,9};
-            int[] b2 = {8,8,8};
-            System.out.println(commonEnd(a1, b1)); // --> true
-            System.out.println(commonEnd(a2, b2)); // --> false
+            int[] b2 = {8,8,9};
+            System.out.println(commonEnd(a1, b1)); // --> false
+            System.out.println(commonEnd(a2, b2)); // --> true
 
             int[] nums1 = {3,4,5,7,8,7,9,7,7};
-            int[] nums2 = {7,1,1,7,1,7};
-            System.out.println(has77(nums1)); // --> true
+            int[] nums2 = {7,7,1,1,7};
+            //System.out.println(has77(nums1)); // --> true
             System.out.println(has77(nums2)); // --> true
 
-            System.out.println(seriesUp(5)); // --> {1,1,2,1,2,3,1,2,3,4,1,2,3,4,5}
-            System.out.println(seriesUp(9)); // --> {1,1,2,1,2,3...1,2,3,4,5,6,7,8,9}
+            System.out.println(Arrays.toString(seriesUp(5))); // --> {1,1,2,1,2,3,1,2,3,4,1,2,3,4,5}
+            System.out.println(Arrays.toString(seriesUp(9))); // --> {1,1,2,1,2,3...1,2,3,4,5,6,7,8,9}
         }
 
         // warmup1
